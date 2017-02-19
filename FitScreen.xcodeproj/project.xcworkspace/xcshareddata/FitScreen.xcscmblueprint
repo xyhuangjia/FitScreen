@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "a1be41ad-fd76-7d4b-8fa3-ce057a7d9d3e++6569",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "a1be41ad-fd76-7d4b-8fa3-ce057a7d9d3e++6569" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "a1be41ad-fd76-7d4b-8fa3-ce057a7d9d3e++6569" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8B247E29-7E80-4698-AF40-6AEDD26C6451",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "a1be41ad-fd76-7d4b-8fa3-ce057a7d9d3e++6569" : "code\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FitScreen",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FitScreen\/FitScreen.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/code.ywsoftware.com\/svn\/2015",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "a1be41ad-fd76-7d4b-8fa3-ce057a7d9d3e++6569"
+    }
+  ]
+}
