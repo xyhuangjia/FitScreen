@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800866691E5C457C0007AF5F /* FitScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 800866671E5C457C0007AF5F /* FitScreen.m */; };
 		80DE46A61E596E36008669D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE46A51E596E36008669D5 /* main.m */; };
 		80DE46A91E596E36008669D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE46A81E596E36008669D5 /* AppDelegate.m */; };
 		80DE46AC1E596E36008669D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE46AB1E596E36008669D5 /* ViewController.m */; };
 		80DE46AF1E596E36008669D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DE46AD1E596E36008669D5 /* Main.storyboard */; };
 		80DE46B11E596E36008669D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80DE46B01E596E36008669D5 /* Assets.xcassets */; };
 		80DE46B41E596E36008669D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DE46B21E596E36008669D5 /* LaunchScreen.storyboard */; };
-		80DE46BE1E596E7B008669D5 /* FitScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE46BC1E596E7B008669D5 /* FitScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800866661E5C457C0007AF5F /* FitScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitScreen.h; sourceTree = "<group>"; };
+		800866671E5C457C0007AF5F /* FitScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitScreen.m; sourceTree = "<group>"; };
+		800866681E5C457C0007AF5F /* RectUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectUtils.h; sourceTree = "<group>"; };
 		80DE46A11E596E36008669D5 /* FitScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DE46A51E596E36008669D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80DE46A71E596E36008669D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,9 +30,6 @@
 		80DE46B01E596E36008669D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80DE46B31E596E36008669D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80DE46B51E596E36008669D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80DE46BB1E596E7B008669D5 /* FitScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitScreen.h; sourceTree = "<group>"; };
-		80DE46BC1E596E7B008669D5 /* FitScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitScreen.m; sourceTree = "<group>"; };
-		80DE46BD1E596E7B008669D5 /* RectUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800866651E5C457C0007AF5F /* FitScreenKit */ = {
+			isa = PBXGroup;
+			children = (
+				800866661E5C457C0007AF5F /* FitScreen.h */,
+				800866671E5C457C0007AF5F /* FitScreen.m */,
+				800866681E5C457C0007AF5F /* RectUtils.h */,
+			);
+			path = FitScreenKit;
+			sourceTree = "<group>";
+		};
 		80DE46981E596E36008669D5 = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +72,7 @@
 		80DE46A31E596E36008669D5 /* FitScreen */ = {
 			isa = PBXGroup;
 			children = (
-				80DE46BB1E596E7B008669D5 /* FitScreen.h */,
-				80DE46BC1E596E7B008669D5 /* FitScreen.m */,
-				80DE46BD1E596E7B008669D5 /* RectUtils.h */,
+				800866651E5C457C0007AF5F /* FitScreenKit */,
 				80DE46A71E596E36008669D5 /* AppDelegate.h */,
 				80DE46A81E596E36008669D5 /* AppDelegate.m */,
 				80DE46AA1E596E36008669D5 /* ViewController.h */,
@@ -158,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80DE46AC1E596E36008669D5 /* ViewController.m in Sources */,
-				80DE46BE1E596E7B008669D5 /* FitScreen.m in Sources */,
+				800866691E5C457C0007AF5F /* FitScreen.m in Sources */,
 				80DE46A91E596E36008669D5 /* AppDelegate.m in Sources */,
 				80DE46A61E596E36008669D5 /* main.m in Sources */,
 			);
@@ -317,6 +325,7 @@
 				80DE46BA1E596E36008669D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
