@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
+   # s.source_files = "FitScreenKit"
   s.source_files  =  "FitScreenKit/**/*.{h,m}" #代码源文件地址，**/*表示Classes目录及其子目录下所有文件，如果有多个目录下则用逗号分开，如果需要在项目中分组显示，这里也要做相应的设置
   # s.exclude_files = "Classes/Exclude"
 
