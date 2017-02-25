@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FitScreen : NSObject
+@interface FitScreenKit : NSObject
 
 @property(nonatomic,assign,readonly)float factor;
 

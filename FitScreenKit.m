@@ -6,7 +6,7 @@
 //  Copyright © 2017年 DeepWater. All rights reserved.
 //
 
-#import "FitScreen.h"
+#import "FitScreenKit.h"
 #import <UIKit/UIKit.h>
 
 /**
@@ -23,16 +23,16 @@ static CGFloat  const parametertwo =1.171875;
  */
 static CGFloat  const parameterThree =1.15;
 
-@interface FitScreen ()
+@interface FitScreenKit ()
 {
     float  coefficient; //缩放系数
 }
 @property(nonatomic,readwrite,assign)float factor;
 @end
 
-@implementation FitScreen
+@implementation FitScreenKit
 
-static FitScreen * __shareInstance;
+static FitScreenKit * __shareInstance;
 
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone{
