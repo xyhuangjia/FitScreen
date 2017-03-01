@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - FitScreenKit (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - FitScreenKit (from `../`)
+
+EXTERNAL SOURCES:
+  FitScreenKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  FitScreenKit: 61d4905563b0f7ef677a04c6c6fdcde28432a7f1
+
+PODFILE CHECKSUM: 452d6b6f8f00996b02c898a1ea21a9912d6bc218
+
+COCOAPODS: 1.2.0.beta.3

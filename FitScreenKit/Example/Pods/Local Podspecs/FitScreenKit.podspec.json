@@ -1,0 +1,22 @@
+{
+  "name": "FitScreenKit",
+  "version": "0.1.0",
+  "summary": "A short description of FitScreenKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/xyhuangjia/FitScreenKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "xyhuangjia": "2587171762@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/xyhuangjia/FitScreenKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FitScreenKit/Classes/**/*"
+}
