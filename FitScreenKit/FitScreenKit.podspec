@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'FitScreenKit/Classes/**/*'
+  s.source_files = 'FitScreenKit/Classes/**/*.{h,m}'
   
   # s.resource_bundles = {
   #   'FitScreenKit' => ['FitScreenKit/Assets/*.png']
