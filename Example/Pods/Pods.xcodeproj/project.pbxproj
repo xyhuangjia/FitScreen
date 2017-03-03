@@ -24,12 +24,18 @@
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
 		6CF84F503C1BE04630FDDE99DF84D050 /* Pods-FitScreenKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5758FDB80BB9F7BC9002BABB9FC2F28F /* Pods-FitScreenKit_Example-dummy.m */; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
-		80F261971E61E76800E33702 /* FitScreenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F261951E61E76800E33702 /* FitScreenKit.h */; };
-		80F261981E61E76800E33702 /* FitScreenKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F261961E61E76800E33702 /* FitScreenKit.m */; };
 		823CFBA4E1B5BCA9412115D09702A6D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA75099E263FEEEAC4EABC8DDDC7FEE0 /* Foundation.framework */; };
 		832DDB1BD583DA30EE160409AAFD55A4 /* Pods-FitScreenKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA51132632FF3F8AA99FEC6028B26C9 /* Pods-FitScreenKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
+		AF38D2BF1E6950070049244C /* FitScreenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AF38D2BD1E6950070049244C /* FitScreenKit.h */; };
+		AF38D2C01E6950070049244C /* FitScreenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AF38D2BD1E6950070049244C /* FitScreenKit.h */; };
+		AF38D2C11E6950070049244C /* FitScreenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AF38D2BD1E6950070049244C /* FitScreenKit.h */; };
+		AF38D2C21E6950070049244C /* FitScreenKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AF38D2BD1E6950070049244C /* FitScreenKit.h */; };
+		AF38D2C31E6950070049244C /* FitScreenKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AF38D2BE1E6950070049244C /* FitScreenKit.m */; };
+		AF38D2C41E6950070049244C /* FitScreenKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AF38D2BE1E6950070049244C /* FitScreenKit.m */; };
+		AF38D2C51E6950070049244C /* FitScreenKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AF38D2BE1E6950070049244C /* FitScreenKit.m */; };
+		AF38D2C61E6950070049244C /* FitScreenKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AF38D2BE1E6950070049244C /* FitScreenKit.m */; };
 		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
@@ -89,8 +95,6 @@
 		73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		7B1B5C52B4BE9BC8DD2FBB766DF896F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		80F261951E61E76800E33702 /* FitScreenKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitScreenKit.h; sourceTree = "<group>"; };
-		80F261961E61E76800E33702 /* FitScreenKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitScreenKit.m; sourceTree = "<group>"; };
 		823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		869F20E4F80B24CD964336783E565127 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +104,10 @@
 		A47B246D93501850D0BA0829DEFB9572 /* Pods-FitScreenKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FitScreenKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A60F5F922150AE880FB27D47B5CE3CF1 /* Pods_FitScreenKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitScreenKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA66238D76B84AA6412E3E34780CB2F7 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF38D2BA1E6950070049244C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		AF38D2BC1E6950070049244C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		AF38D2BD1E6950070049244C /* FitScreenKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitScreenKit.h; sourceTree = "<group>"; };
+		AF38D2BE1E6950070049244C /* FitScreenKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitScreenKit.m; sourceTree = "<group>"; };
 		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		C7DFBD3A099DE3C161A8E495D5D2AC13 /* FitScreenKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FitScreenKit-prefix.pch"; sourceTree = "<group>"; };
@@ -158,14 +166,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		044A4783F4E293E8DE670F0A8021378B /* FitScreenKit */ = {
-			isa = PBXGroup;
-			children = (
-				1D01FF8E8828120FF4BA728414390488 /* Classes */,
-			);
-			path = FitScreenKit;
-			sourceTree = "<group>";
-		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,15 +186,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FBSnapshotTestCase";
-			sourceTree = "<group>";
-		};
-		1D01FF8E8828120FF4BA728414390488 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				80F261951E61E76800E33702 /* FitScreenKit.h */,
-				80F261961E61E76800E33702 /* FitScreenKit.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */ = {
@@ -265,7 +256,7 @@
 		823EAF17F5DEB3468C4DBF719A47DFE3 /* FitScreenKit */ = {
 			isa = PBXGroup;
 			children = (
-				044A4783F4E293E8DE670F0A8021378B /* FitScreenKit */,
+				AF38D2B81E6950070049244C /* FitScreenKit */,
 				7FB0F362AC650DAB0BEA7A7708E4F1C7 /* Support Files */,
 			);
 			name = FitScreenKit;
@@ -287,6 +278,33 @@
 				D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */,
 			);
 			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		AF38D2B81E6950070049244C /* FitScreenKit */ = {
+			isa = PBXGroup;
+			children = (
+				AF38D2B91E6950070049244C /* Assets */,
+				AF38D2BB1E6950070049244C /* Classes */,
+			);
+			path = FitScreenKit;
+			sourceTree = "<group>";
+		};
+		AF38D2B91E6950070049244C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AF38D2BA1E6950070049244C /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AF38D2BB1E6950070049244C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF38D2BC1E6950070049244C /* .gitkeep */,
+				AF38D2BD1E6950070049244C /* FitScreenKit.h */,
+				AF38D2BE1E6950070049244C /* FitScreenKit.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		E86A31F3DD5D783A53AC88A649FDDB13 /* Pods-FitScreenKit_Example */ = {
@@ -363,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				832DDB1BD583DA30EE160409AAFD55A4 /* Pods-FitScreenKit_Example-umbrella.h in Headers */,
+				AF38D2C11E6950070049244C /* FitScreenKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +389,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80F261971E61E76800E33702 /* FitScreenKit.h in Headers */,
+				AF38D2BF1E6950070049244C /* FitScreenKit.h in Headers */,
 				B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */,
 				9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */,
 				BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */,
@@ -387,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C4DC6ECCE66F307BF5B9BF3CE92ABB /* FitScreenKit-umbrella.h in Headers */,
+				AF38D2C01E6950070049244C /* FitScreenKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				341340ED5799EE0C951A182C7D77D30F /* Pods-FitScreenKit_Tests-umbrella.h in Headers */,
+				AF38D2C21E6950070049244C /* FitScreenKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF38D2C51E6950070049244C /* FitScreenKit.m in Sources */,
 				6CF84F503C1BE04630FDDE99DF84D050 /* Pods-FitScreenKit_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF38D2C41E6950070049244C /* FitScreenKit.m in Sources */,
 				1B27D6C8DE6CC93BD30D94E9E4B257EC /* FitScreenKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF38D2C61E6950070049244C /* FitScreenKit.m in Sources */,
 				6552401D8D82F2949CAC2935F734B209 /* Pods-FitScreenKit_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,7 +559,7 @@
 				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
 				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
 				094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */,
-				80F261981E61E76800E33702 /* FitScreenKit.m in Sources */,
+				AF38D2C31E6950070049244C /* FitScreenKit.m in Sources */,
 				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
 				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
 				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,
