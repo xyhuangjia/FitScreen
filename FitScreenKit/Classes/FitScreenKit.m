@@ -47,20 +47,16 @@ static FitScreenKit * __shareInstance;
     if (__shareInstance) return __shareInstance;
     return [[self alloc] init];
 }
+
 - (instancetype)init {
     if (self = [super init]) {
         coefficient = [self getTranateParas];
         self.factor = coefficient;
-        NSLog(@"%f",self.factor);
+//        NSLog(@"%f",self.factor);
     }
     return self;
 }
 
-/*
- 算法逻辑：1.启动设备，判定设备型号
-         2.已设备6的3倍图作为基准进行缩放操作
-         3.
- */
 /**
  转换获取屏幕坐标
 
