@@ -64,8 +64,10 @@ static FitScreenKit * __shareInstance;
  */
 - (float )getTranateParas{
     float convertPixel = 0;
+    
     CGFloat viewHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat viewWidth = [UIScreen mainScreen].bounds.size.width;
+    
     if (viewWidth ==320) {
         if (viewHeight ==480) {
             NSLog(@"NOT SUPPORT");

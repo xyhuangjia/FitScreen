@@ -1,6 +1,0 @@
-framework module FitScreenKit {
-  umbrella header "FitScreenKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
