@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FitScreenKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "一个适配屏幕的方案"
 
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
 
-  一个适配屏幕的方案,适合4s以上设备
+  一个适配屏幕的方案,适合4s以上设备,使用宏定义来调参数
                    DESC
 
   s.homepage     = "https://github.com/xyhuangjia/FitScreenKit"
@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   s.source_files  = "Classes", "FitScreenKit/Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
