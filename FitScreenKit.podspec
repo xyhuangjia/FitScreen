@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   s.source_files  = "Classes", "FitScreenKit/Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "FitScreenKit/Classes/FitScreen.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
