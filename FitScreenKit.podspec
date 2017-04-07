@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FitScreenKit"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "一个适配屏幕的方案"
 
   # This description is used to generate tags and improve search results.
@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   s.source_files  = "Classes", "FitScreenKit/Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "FitScreenKit/Classes/FitScreen.h"
+  # #s.public_header_files = "FitScreenKit/Classes/FitScreen.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
