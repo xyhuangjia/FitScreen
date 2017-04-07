@@ -6,6 +6,9 @@
 //
 //
 
+
+#import <Foundation/Foundation.h>
+
 #ifndef FitScreen_h
 #define FitScreen_h
 
