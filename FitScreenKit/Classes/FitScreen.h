@@ -9,7 +9,7 @@
 #ifndef FitScreen_h
 #define FitScreen_h
 
-//#import "FitScreenKit.h"
+#import "FitScreenKit.h"
 
 #define Factor(pix) [FitScreenKit shareInstance].factor*(pix)
 
