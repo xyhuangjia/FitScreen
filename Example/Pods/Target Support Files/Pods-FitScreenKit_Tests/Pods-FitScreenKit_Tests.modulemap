@@ -1,0 +1,6 @@
+framework module Pods_FitScreenKit_Tests {
+  umbrella header "Pods-FitScreenKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

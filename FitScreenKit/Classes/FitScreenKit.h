@@ -1,18 +1,15 @@
 //
-//  FitScreen.h
-//  MusicPlayer
+//  FitScreenKit.h
+//  Pods
 //
-//  Created by DeepWater on 2017/2/16.
-//  Copyright © 2017年 DeepWater. All rights reserved.
+//  Created by 黄佳 on 2017/9/11.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef FitScreenKit_h
+#define FitScreenKit_h
+#import "MHFitScreenKit.h"
 
-@interface FitScreenKit : NSObject
-
-@property(nonatomic,assign,readonly)float factor;
-
-+ (instancetype)shareInstance;
-
-
-@end
+static inline CGFloat factor(CGFloat value) {
+    return value * [MHFitScreenKit shareInstance].factor;
+}
+#endif /* FitScreenKit_h */

@@ -1,6 +1,6 @@
 # FitScreenKit
 
-[![CI Status](http://img.shields.io/travis/xyhuangjia/FitScreenKit.svg?style=flat)](https://travis-ci.org/xyhuangjia/FitScreenKit)
+[![CI Status](http://img.shields.io/travis/黄佳/FitScreenKit.svg?style=flat)](https://travis-ci.org/黄佳/FitScreenKit)
 [![Version](https://img.shields.io/cocoapods/v/FitScreenKit.svg?style=flat)](http://cocoapods.org/pods/FitScreenKit)
 [![License](https://img.shields.io/cocoapods/l/FitScreenKit.svg?style=flat)](http://cocoapods.org/pods/FitScreenKit)
 [![Platform](https://img.shields.io/cocoapods/p/FitScreenKit.svg?style=flat)](http://cocoapods.org/pods/FitScreenKit)
@@ -17,12 +17,12 @@ FitScreenKit is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "FitScreenKit"
+pod 'FitScreenKit'
 ```
 
 ## Author
 
-xyhuangjia, 2587171762@qq.com
+黄佳, xyhuangjia@foxmail.com
 
 ## License
 
