@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'FitScreenKit'
   s.version          = '0.0.6'
-  s.summary          = '一个屏幕缩放的适配方案(适配iPhone X)'
+  s.summary          = '一个屏幕缩放的适配方案'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-在那时没有说明
+一个屏幕缩放的适配方案(适配iPhone X)
                        DESC
 
   s.homepage         = 'https://github.com/xyhuangjia/FitScreenKit'
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   #   'FitScreenKit' => ['FitScreenKit/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'FitScreenKit/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
