@@ -16,7 +16,7 @@
 //    NSLog(@"%f",[MHFitScreenKit shareInstance].factor);
 //    NSLog(@"height:%f",factor(1920));
 //    NSLog(@"%f",factor(1080));
-    NSLog(@"%f",factor(1080));
+   
     NSLog(@"%f",factorX(1080));
     NSLog(@"%f",factorY(1920));
 //    NSLog(@"%f",factor(1080));
