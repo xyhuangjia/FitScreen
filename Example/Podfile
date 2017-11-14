@@ -7,5 +7,6 @@ target 'FitScreenKit_Example' do
     inherit! :search_paths
 
     pod 'FBSnapshotTestCase'
+    
   end
 end

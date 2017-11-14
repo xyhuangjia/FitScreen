@@ -14,14 +14,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 //    NSLog(@"%f",[MHFitScreenKit shareInstance].factor);
-    NSLog(@"%f",factor(1920));
+//    NSLog(@"height:%f",factor(1920));
+//    NSLog(@"%f",factor(1080));
     NSLog(@"%f",factor(1080));
-    NSLog(@"%f",factor(1080));
-    NSLog(@"%f",factor(1080));
-    NSLog(@"%f",factor(1080));
-    NSLog(@"%f",factor(1080));
-    NSLog(@"%f",[UIScreen mainScreen].bounds.size.width);
-    NSLog(@"%f",[UIScreen mainScreen].bounds.size.height);
+    NSLog(@"%f",factorX(1080));
+    NSLog(@"%f",factorY(1920));
+//    NSLog(@"%f",factor(1080));
+//    NSLog(@"%f",[UIScreen mainScreen].bounds.size.width);
+//    NSLog(@"%f",[UIScreen mainScreen].bounds.size.height);
+//    CGFloat  a;
+//    a = factor(100);
+//    NSLog(@"%f",a);
     return YES;
 }
 

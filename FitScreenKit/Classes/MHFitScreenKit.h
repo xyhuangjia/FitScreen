@@ -10,4 +10,6 @@
 @interface MHFitScreenKit : NSObject
 @property(nonatomic,assign,readonly)CGFloat factor;
 + (instancetype)shareInstance;
+- (float)ft_IPhoneXFactorToX;
+- (float)ft_IPhoneXFactorToY;
 @end
