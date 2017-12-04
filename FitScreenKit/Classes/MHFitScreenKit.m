@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger,axisType) {
 
 @interface MHFitScreenKit ()
 @property(nonatomic,readwrite,assign)CGFloat factor;
-@property(nonatomic,readwrite,assign)NSString * platformStr;
+@property(nonatomic,readwrite,copy)NSString * platformStr;
 @end
 
 @implementation MHFitScreenKit
@@ -62,8 +62,6 @@ static CGFloat viewWidth = 0;
 - (instancetype)init {
     if (self = [super init]) {
         self.platformStr = [self platformString];
-//        self.factor = [self getTranateParas:0];
-//        NSLog(@"factor%f",self.factor);
     }
     return self;
 }
