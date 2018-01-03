@@ -106,13 +106,13 @@ static CGFloat viewWidth = 0;
  */
 -  (float)normalPlatformFactor{
     NSString * platform = [self platformString];
-    if ([platform isEqualToString:@"iPhone5,2"]||[platform isEqualToString:@"iPhone5,3"]||[platform isEqualToString:@"iPhone5,4"]||[platform isEqualToString:@"iPhone6,1"]||[platform isEqualToString:@"iPhone6,2"]||[platform isEqualToString:@"iPhone8,4"]) {
+    if ([platform isEqualToString:@"iPhone5,1"]||[platform isEqualToString:@"iPhone5,2"]||[platform isEqualToString:@"iPhone5,3"]||[platform isEqualToString:@"iPhone5,4"]||[platform isEqualToString:@"iPhone6,1"]||[platform isEqualToString:@"iPhone6,2"]||[platform isEqualToString:@"iPhone8,4"]) {
         //5
         return  1/parameterOne/3/parametertwo;
-    }else if ([platform isEqualToString:@"iPhone7,1"]||[platform isEqualToString:@"iPhone8,1"]||[platform isEqualToString:@"iPhone9,1"]||[platform isEqualToString:@"iPhone9,3"]||[platform isEqualToString:@"iPhone10,1"]||[platform isEqualToString:@"iPhone10,4"]){
+    }else if ([platform isEqualToString:@"iPhone7,2"]||[platform isEqualToString:@"iPhone8,1"]||[platform isEqualToString:@"iPhone9,1"]||[platform isEqualToString:@"iPhone9,3"]||[platform isEqualToString:@"iPhone10,1"]||[platform isEqualToString:@"iPhone10,4"]){
         //6,6S.7,7S,8
         return   1/parameterOne/3;
-    }else if ([platform isEqualToString:@"iPhone7,2"]||[platform isEqualToString:@"iPhone8,2"]||[platform isEqualToString:@"iPhone9,2"]||[platform isEqualToString:@"iPhone9,4"]||[platform isEqualToString:@"iPhone10,2"]||[platform isEqualToString:@"iPhone10,5"]){
+    }else if ([platform isEqualToString:@"iPhone7,1"]||[platform isEqualToString:@"iPhone8,2"]||[platform isEqualToString:@"iPhone9,2"]||[platform isEqualToString:@"iPhone9,4"]||[platform isEqualToString:@"iPhone10,2"]||[platform isEqualToString:@"iPhone10,5"]){
         //6 Plus,6S Plus,7 Plus,7S Plus,8 Plus
          return   parameterThree/3;
     }
