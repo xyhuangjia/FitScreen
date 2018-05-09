@@ -16,9 +16,11 @@
 //    NSLog(@"%f",[MHFitScreenKit shareInstance].factor);
 //    NSLog(@"height:%f",factor(1920));
 //    NSLog(@"%f",factor(1080));
-   
-    NSLog(@"%f",factorX(1080));
-    NSLog(@"%f",factorY(1920));
+    [[MHFitScreenKit shareInstance] setViewCalloutSize:Callout750X1334];
+    NSLog(@"%f",factorX(750));
+    NSLog(@"%f",factorY(1334));
+//    NSLog(@"%f",factorX(1080));
+//    NSLog(@"%f",factorY(1920));
 //    NSLog(@"%f",factor(1080));
 //    NSLog(@"%f",[UIScreen mainScreen].bounds.size.width);
 //    NSLog(@"%f",[UIScreen mainScreen].bounds.size.height);

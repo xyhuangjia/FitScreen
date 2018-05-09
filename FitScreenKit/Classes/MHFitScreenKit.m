@@ -36,6 +36,8 @@ typedef NS_ENUM(NSInteger,axisType) {
 @interface MHFitScreenKit ()
 @property(nonatomic,readwrite,assign)CGFloat factor;
 @property(nonatomic,readwrite,copy)NSString * platformStr;
+@property(nonatomic,assign,readwrite)CalloutSize calloutSize;
+
 @end
 
 @implementation MHFitScreenKit
@@ -65,7 +67,11 @@ static CGFloat viewWidth = 0;
     }
     return self;
 }
-
+- (void)setViewCalloutSize:(CalloutSize) calloutSize{
+    NSLog(@"%ld",(long)calloutSize);
+    NSLog(@"%ld",_calloutSize);
+    _calloutSize = calloutSize;
+}
 //MARK:  runtime
 
 /**
@@ -75,8 +81,14 @@ static CGFloat viewWidth = 0;
  */
 - (float)ft_IPhoneXFactorToX{
     if ([self.platformStr isEqualToString:@"iPhone X"]) {
-        return  1/parameterOne/3;
+//        return  1/parameterOne/3.0;
+        if (_calloutSize != Callout750X1334 ) {
+            return   1/parameterOne/3.0;
+        }else{
+            return 1/2.0;
+        }
     }else if ([self.platformStr isEqualToString:@"iPhone Simulator"]){
+        NSLog(@"%f",[self getTranateParas:axisX]);
         return [self getTranateParas:axisX];
     }else{
         return  [self normalPlatformFactor];
@@ -90,7 +102,12 @@ static CGFloat viewWidth = 0;
  */
 - (float)ft_IPhoneXFactorToY{
     if ([self.platformStr isEqualToString:@"iPhone X"]) {
-        return  parameterThree/3;
+//        return  parameterThree/3.0;
+        if (_calloutSize != Callout750X1334) {
+            return  parameterThree/3.0;
+        }else{
+            return  1/2.0*3*parameterOne*parameterThree/3.0;
+        }
     }else if ([self.platformStr isEqualToString:@"iPhone Simulator"]){
         return [self getTranateParas:axisY];
     }else{
@@ -108,13 +125,29 @@ static CGFloat viewWidth = 0;
     NSString * platform = [self platformString];
     if ([platform isEqualToString:@"iPhone5,1"]||[platform isEqualToString:@"iPhone5,2"]||[platform isEqualToString:@"iPhone5,3"]||[platform isEqualToString:@"iPhone5,4"]||[platform isEqualToString:@"iPhone6,1"]||[platform isEqualToString:@"iPhone6,2"]||[platform isEqualToString:@"iPhone8,4"]) {
         //5
-        return  1/parameterOne/3/parametertwo;
+        if (_calloutSize != Callout750X1334) {
+             return  1/parameterOne/3.0/parametertwo;
+        }else{
+            return 1/parametertwo/2.0;
+        }
+       
     }else if ([platform isEqualToString:@"iPhone7,2"]||[platform isEqualToString:@"iPhone8,1"]||[platform isEqualToString:@"iPhone9,1"]||[platform isEqualToString:@"iPhone9,3"]||[platform isEqualToString:@"iPhone10,1"]||[platform isEqualToString:@"iPhone10,4"]){
         //6,6S.7,7S,8
-        return   1/parameterOne/3;
+        if (_calloutSize != Callout750X1334 ) {
+            return   1/parameterOne/3.0;
+        }else{
+            return 1/2.0;
+        }
+        
     }else if ([platform isEqualToString:@"iPhone7,1"]||[platform isEqualToString:@"iPhone8,2"]||[platform isEqualToString:@"iPhone9,2"]||[platform isEqualToString:@"iPhone9,4"]||[platform isEqualToString:@"iPhone10,2"]||[platform isEqualToString:@"iPhone10,5"]){
         //6 Plus,6S Plus,7 Plus,7S Plus,8 Plus
-         return   parameterThree/3;
+ 
+        if (_calloutSize != Callout750X1334) {
+            return  parameterThree/3.0;
+        }else{
+            return  1/2.0*3*parameterOne*parameterThree/3.0;
+        }
+        
     }
     return 0;
 }
@@ -156,24 +189,49 @@ static CGFloat viewWidth = 0;
         if (viewHeight ==480) {
             //不支持4s设备
             NSLog(@"NOT SUPPORT");
-            return convertPixel  =  1/parameterOne/3/parametertwo;
+            return convertPixel  =  1/parameterOne/3.0/parametertwo;
         }else if (viewHeight ==568){
-            return convertPixel  =  1/parameterOne/3/parametertwo;
+//            return convertPixel  =  1/parameterOne/3.0/parametertwo;
+            if (_calloutSize != Callout750X1334) {
+                return convertPixel  =  1/parameterOne/3.0/parametertwo;
+            }else{
+                return convertPixel  = 1/parametertwo/2.0;
+            }
         }
     }else if (viewWidth ==375){
         if(viewHeight ==812){
             //该设备为iPhone8，需要将其降到@2x标准尺寸后放大操作满足要求
-            //375*736
+            //3.075*736
             if (axistype == axisX) {
-                return   convertPixel  =  1/parameterOne/3;
+//                return   convertPixel  =  1/parameterOne/3.0;
+                if (_calloutSize != Callout750X1334) {
+                    return  convertPixel  = 1/parameterOne/3.0;
+                }else{
+                    return convertPixel  = 1/2.0;
+                }
             } else {
-                return  parameterThree/3;
+//                return  parameterThree/3.0;
+                if (_calloutSize != Callout750X1334) {
+                    return convertPixel  =  parameterThree/3.0;
+                }else{
+                    return convertPixel  = 1/2.0*3*parameterOne*parameterThree/3.0;
+                }
             }
         }else{
-            return   convertPixel  =  1/parameterOne/3;
+//            return   convertPixel  =  1/parameterOne/3.0;
+            if (_calloutSize != Callout750X1334) {
+                return  convertPixel  = 1/parameterOne/3.0;
+            }else{
+                return convertPixel  = 1/2.0;
+            }
         }
     }else if (viewWidth ==414){
-        return   convertPixel  =  parameterThree/3;
+//        return   convertPixel  =  parameterThree/3.0;
+        if (_calloutSize != Callout750X1334) {
+            return convertPixel  =  parameterThree/3.0;
+        }else{
+            return convertPixel  = 1/2.0*3*parameterOne*parameterThree/3.0;
+        }
     }
     return convertPixel;
 }
