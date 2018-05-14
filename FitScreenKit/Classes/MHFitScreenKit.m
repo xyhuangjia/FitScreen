@@ -68,8 +68,8 @@ static CGFloat viewWidth = 0;
     return self;
 }
 - (void)setViewCalloutSize:(CalloutSize) calloutSize{
-    NSLog(@"%ld",(long)calloutSize);
-    NSLog(@"%ld",_calloutSize);
+//    NSLog(@"%ld",(long)calloutSize);
+//    NSLog(@"%ld",_calloutSize);
     _calloutSize = calloutSize;
 }
 //MARK:  runtime
@@ -88,7 +88,7 @@ static CGFloat viewWidth = 0;
             return 1/2.0;
         }
     }else if ([self.platformStr isEqualToString:@"iPhone Simulator"]){
-        NSLog(@"%f",[self getTranateParas:axisX]);
+//        NSLog(@"%f",[self getTranateParas:axisX]);
         return [self getTranateParas:axisX];
     }else{
         return  [self normalPlatformFactor];
