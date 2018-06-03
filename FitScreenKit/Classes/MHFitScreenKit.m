@@ -5,13 +5,9 @@
 //  Created by 黄佳 on 2017/9/11.
 //
 
-
-
-
-
 #import "MHFitScreenKit.h"
 #import <UIKit/UIKit.h>
-#include <sys/sysctl.h>
+#import "MHDeviceModel.h"
 
 /**
  *  1080*1920转6的系数
@@ -34,10 +30,9 @@ typedef NS_ENUM(NSInteger,axisType) {
 };
 
 @interface MHFitScreenKit ()
-@property(nonatomic,readwrite,assign)CGFloat factor;
-@property(nonatomic,readwrite,copy)NSString * platformStr;
-@property(nonatomic,assign,readwrite)CalloutSize calloutSize;
-
+@property (nonatomic,assign,readwrite) CGFloat  factor;
+@property (nonatomic,assign,readwrite)  CalloutSize calloutSize;
+@property (nonatomic,assign,readwrite)  MHScreenSize size;
 @end
 
 @implementation MHFitScreenKit
@@ -52,6 +47,7 @@ static CGFloat viewWidth = 0;
         __shareInstance = [super allocWithZone:zone];
         viewHeight      = [UIScreen mainScreen].bounds.size.height;
         viewWidth       = [UIScreen mainScreen].bounds.size.width;
+        
     });
     return __shareInstance;
 }
@@ -63,7 +59,7 @@ static CGFloat viewWidth = 0;
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.platformStr = [self platformString];
+        self.size = [MHDeviceModel platformScreenSize];
     }
     return self;
 }
@@ -72,47 +68,49 @@ static CGFloat viewWidth = 0;
 //    NSLog(@"%ld",_calloutSize);
     _calloutSize = calloutSize;
 }
+
+- (CGFloat)factor{
+    return [self normalPlatformFactor:self.size];
+}
+
+
 //MARK:  runtime
-
 /**
- IPhone的X轴缩放系数
+ iPhone的X轴缩放系数
 
- @return <#return value description#>
+ @return 缩放系数
  */
 - (float)ft_IPhoneXFactorToX{
-    if ([self.platformStr isEqualToString:@"iPhone X"]) {
-//        return  1/parameterOne/3.0;
-        if (_calloutSize != Callout750X1334 ) {
-            return   1/parameterOne/3.0;
+    float factorx  = 0.0;
+    if (self.size == MHScreenSize5_8) {
+        if (_calloutSize != Callout750X1334) {
+            factorx = parameterThree/3.0;
         }else{
-            return 1/2.0;
+            factorx =  1/2.0*3*parameterOne*parameterThree/3.0;
         }
-    }else if ([self.platformStr isEqualToString:@"iPhone Simulator"]){
-//        NSLog(@"%f",[self getTranateParas:axisX]);
-        return [self getTranateParas:axisX];
-    }else{
-        return  [self normalPlatformFactor];
+    } else {
+        factorx = [self normalPlatformFactor:self.size];
     }
+    return factorx;
 }
 
 /**
- IPhone的Y轴缩放系数
+ iPhone的Y轴缩放系数
 
- @return <#return value description#>
+ @return return 缩放系数
  */
 - (float)ft_IPhoneXFactorToY{
-    if ([self.platformStr isEqualToString:@"iPhone X"]) {
-//        return  parameterThree/3.0;
+    float factory  = 0.0;
+    if (self.size == MHScreenSize5_8) {
         if (_calloutSize != Callout750X1334) {
             return  parameterThree/3.0;
         }else{
             return  1/2.0*3*parameterOne*parameterThree/3.0;
         }
-    }else if ([self.platformStr isEqualToString:@"iPhone Simulator"]){
-        return [self getTranateParas:axisY];
-    }else{
-        return  [self normalPlatformFactor];
+    } else {
+        factory = [self normalPlatformFactor:self.size];
     }
+    return factory;
 }
 
 
@@ -121,125 +119,68 @@ static CGFloat viewWidth = 0;
 
  @return <#return value description#>
  */
--  (float)normalPlatformFactor{
-    NSString * platform = [self platformString];
-    if ([platform isEqualToString:@"iPhone5,1"]||[platform isEqualToString:@"iPhone5,2"]||[platform isEqualToString:@"iPhone5,3"]||[platform isEqualToString:@"iPhone5,4"]||[platform isEqualToString:@"iPhone6,1"]||[platform isEqualToString:@"iPhone6,2"]||[platform isEqualToString:@"iPhone8,4"]) {
-        //5
-        if (_calloutSize != Callout750X1334) {
-             return  1/parameterOne/3.0/parametertwo;
-        }else{
-            return 1/parametertwo/2.0;
-        }
-       
-    }else if ([platform isEqualToString:@"iPhone7,2"]||[platform isEqualToString:@"iPhone8,1"]||[platform isEqualToString:@"iPhone9,1"]||[platform isEqualToString:@"iPhone9,3"]||[platform isEqualToString:@"iPhone10,1"]||[platform isEqualToString:@"iPhone10,4"]){
-        //6,6S.7,7S,8
-        if (_calloutSize != Callout750X1334 ) {
-            return   1/parameterOne/3.0;
-        }else{
-            return 1/2.0;
-        }
-        
-    }else if ([platform isEqualToString:@"iPhone7,1"]||[platform isEqualToString:@"iPhone8,2"]||[platform isEqualToString:@"iPhone9,2"]||[platform isEqualToString:@"iPhone9,4"]||[platform isEqualToString:@"iPhone10,2"]||[platform isEqualToString:@"iPhone10,5"]){
-        //6 Plus,6S Plus,7 Plus,7S Plus,8 Plus
- 
-        if (_calloutSize != Callout750X1334) {
-            return  parameterThree/3.0;
-        }else{
-            return  1/2.0*3*parameterOne*parameterThree/3.0;
-        }
-        
-    }
-    return 0;
-}
-
-//MARK:  固件号
-/**
- 判断设备的型号
-
- @return 设备型号
- */
-- (NSString *)platformString {
-    //https://www.theiphonewiki.com/wiki/Models
-    // Gets a string with the device model
-    size_t size;
-    int nR = sysctlbyname("hw.machine", NULL, &size, NULL, 0);
-    char *machine = (char *)malloc(size);
-    nR = sysctlbyname("hw.machine", machine, &size, NULL, 0);
-    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
-    free(machine);
-    if ([platform isEqualToString:@"iPhone10,3"]||[platform isEqualToString:@"iPhone10,6"]){
-        //X
-        return @"iPhone X";
-    }else if ([platform isEqualToString:@"iPhone Simulator"] || [platform isEqualToString:@"x86_64"]){
-       return @"iPhone Simulator";
-    }
-    return platform;
-
-}
-
-//MARK:  针对模拟器等设备
-/**
- 转换获取屏幕坐标
- @return 坐标信息
- */
-- (CGFloat )getTranateParas:(axisType)axistype{
-//    NSLog(@"platformString:%@",self.platformStr);
-    CGFloat convertPixel = 0;
-    if (viewWidth ==320) {
-        if (viewHeight ==480) {
-            //不支持4s设备
-            NSLog(@"NOT SUPPORT");
-            return convertPixel  =  1/parameterOne/3.0/parametertwo;
-        }else if (viewHeight ==568){
-//            return convertPixel  =  1/parameterOne/3.0/parametertwo;
+-  (float)normalPlatformFactor:(MHScreenSize)size{
+    float normalFactor  = 0.0;
+    switch (size) {
+        case MHScreenSize5_5:
+        {
             if (_calloutSize != Callout750X1334) {
-                return convertPixel  =  1/parameterOne/3.0/parametertwo;
+                normalFactor = parameterThree/3.0;
             }else{
-                return convertPixel  = 1/parametertwo/2.0;
+                normalFactor =  1/2.0*3*parameterOne*parameterThree/3.0;
             }
         }
-    }else if (viewWidth ==375){
-        if(viewHeight ==812){
-            //该设备为iPhone8，需要将其降到@2x标准尺寸后放大操作满足要求
-            //3.075*736
-            if (axistype == axisX) {
-//                return   convertPixel  =  1/parameterOne/3.0;
-                if (_calloutSize != Callout750X1334) {
-                    return  convertPixel  = 1/parameterOne/3.0;
-                }else{
-                    return convertPixel  = 1/2.0;
-                }
-            } else {
-//                return  parameterThree/3.0;
-                if (_calloutSize != Callout750X1334) {
-                    return convertPixel  =  parameterThree/3.0;
-                }else{
-                    return convertPixel  = 1/2.0*3*parameterOne*parameterThree/3.0;
-                }
+            break;
+        case MHScreenSize4_7:
+        {
+            if (_calloutSize != Callout750X1334 ) {
+                normalFactor =   1/parameterOne/3.0;
+            }else{
+                normalFactor = 1/2.0;
             }
-        }else{
-//            return   convertPixel  =  1/parameterOne/3.0;
+        }
+            break;
+        case MHScreenSize4_0:
+        {
+            //5
             if (_calloutSize != Callout750X1334) {
-                return  convertPixel  = 1/parameterOne/3.0;
+                normalFactor =  1/parameterOne/3.0/parametertwo;
             }else{
-                return convertPixel  = 1/2.0;
+                normalFactor = 1/2.0/parametertwo;
             }
         }
-    }else if (viewWidth ==414){
-//        return   convertPixel  =  parameterThree/3.0;
-        if (_calloutSize != Callout750X1334) {
-            return convertPixel  =  parameterThree/3.0;
-        }else{
-            return convertPixel  = 1/2.0*3*parameterOne*parameterThree/3.0;
+            break;
+        case MHScreenSize3_5:
+        {//4S
+            if (_calloutSize != Callout750X1334) {
+                normalFactor =  parameterThree/3.0;
+            }else{
+                normalFactor =   1/2.0*3*parameterOne*parameterThree/3.0;
+            }
         }
+            break;
+            
+        default:
+            break;
     }
-    return convertPixel;
+    return normalFactor;
 }
 
+//MARK: 系数运算
 
 
+/**
+ 获取设别信息
 
-
-
+ @param callloutSizeType <#callloutSizeType description#>
+ @param screenSize <#deviceName description#>
+ @param completion <#completion description#>
+ */
+- (void)getMessageWithCallloutSizeType:(CalloutSize)callloutSizeType
+                           MHScreenSize:(MHScreenSize )screenSize
+                           Completion:(void(^)(NSDictionary * info))completion{
+    NSDictionary * dic = @{@"size":@"设备型号"};
+    completion(dic);
+}
 
 @end

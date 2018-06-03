@@ -9,9 +9,8 @@
 
 
 typedef NS_ENUM(NSInteger,CalloutSize) {
-   
-    Callout750X1334  = 1 << 1,
-    Callout1080X1920 = 1 << 2,
+    Callout750X1334  = 1 << 0,
+    Callout1080X1920 = 1 << 1,
 };
 
 @interface MHFitScreenKit : NSObject
