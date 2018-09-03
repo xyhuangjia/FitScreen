@@ -161,6 +161,13 @@ static CGFloat viewWidth = 0;
             break;
             
         default:
+        {
+            if (_calloutSize != Callout750X1334 ) {
+                normalFactor =   1/parameterOne/3.0;
+            }else{
+                normalFactor = 1/2.0;
+            }
+        }
             break;
     }
     return normalFactor;
