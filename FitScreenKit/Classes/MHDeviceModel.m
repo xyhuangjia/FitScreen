@@ -50,8 +50,14 @@ static CGFloat const kiPhoneXScreenHeigth = 812;
     NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
     free(machine);
     
-    if ([platform isEqualToString:@"iPhone10,3"]||[platform isEqualToString:@"iPhone10,6"]){
-        //X
+    if ([platform isEqualToString:@"iPhone11,8"]){
+        //XSMax
+        return MHScreenSize6_1;
+    }else if ([platform isEqualToString:@"iPhone11,6"]||[platform isEqualToString:@"iPhone11,4"]){
+        //XSMax
+        return MHScreenSize6_5;
+    }else if ([platform isEqualToString:@"iPhone10,3"]||[platform isEqualToString:@"iPhone10,6"]||[platform isEqualToString:@"iPhone11,2"]){
+        //X XS
         return MHScreenSize5_8;
     }else if ([platform isEqualToString:@"iPhone5,1"]||[platform isEqualToString:@"iPhone5,2"]||[platform isEqualToString:@"iPhone5,3"]||[platform isEqualToString:@"iPhone5,4"]||[platform isEqualToString:@"iPhone6,1"]||[platform isEqualToString:@"iPhone6,2"]||[platform isEqualToString:@"iPhone8,4"]) {
         //5,5S,5C

@@ -64,8 +64,6 @@ static CGFloat viewWidth = 0;
     return self;
 }
 - (void)setViewCalloutSize:(CalloutSize) calloutSize{
-//    NSLog(@"%ld",(long)calloutSize);
-//    NSLog(@"%ld",_calloutSize);
     _calloutSize = calloutSize;
 }
 

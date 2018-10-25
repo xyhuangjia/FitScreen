@@ -22,7 +22,7 @@ pod 'FitScreenKit'
 
 ## Author
 
-黄佳, xyhuangjia@foxmail.com
+黄佳, xyhuangjia@gmail.com
 
 ## License
 
