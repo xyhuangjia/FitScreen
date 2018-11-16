@@ -64,8 +64,6 @@ static CGFloat viewWidth = 0;
     return self;
 }
 - (void)setViewCalloutSize:(CalloutSize) calloutSize{
-//    NSLog(@"%ld",(long)calloutSize);
-//    NSLog(@"%ld",_calloutSize);
     _calloutSize = calloutSize;
 }
 
@@ -150,15 +148,15 @@ static CGFloat viewWidth = 0;
             }
         }
             break;
-        case MHScreenSize3_5:
-        {//4S
-            if (_calloutSize != Callout750X1334) {
-                normalFactor =  parameterThree/3.0;
-            }else{
-                normalFactor =   1/2.0*3*parameterOne*parameterThree/3.0;
-            }
-        }
-            break;
+//        case MHScreenSize3_5:
+//        {//4S
+//            if (_calloutSize != Callout750X1334) {
+//                normalFactor =  parameterThree/3.0;
+//            }else{
+//                normalFactor =   1/2.0*3*parameterOne*parameterThree/3.0;
+//            }
+//        }
+//            break;
             
         default:
             break;

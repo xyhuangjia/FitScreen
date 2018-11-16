@@ -1,8 +1,8 @@
 {
   "name": "FitScreenKit",
-  "version": "0.0.5",
+  "version": "0.1.2",
   "summary": "一个屏幕缩放的适配方案",
-  "description": "在那时没有说明",
+  "description": "一个屏幕缩放的适配方案(适配iPhone X)",
   "homepage": "https://github.com/xyhuangjia/FitScreenKit",
   "license": {
     "type": "MIT",
@@ -13,11 +13,16 @@
   },
   "source": {
     "git": "https://github.com/xyhuangjia/FitScreenKit.git",
-    "tag": "0.0.5"
+    "tag": "0.1.2"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "FitScreenKit/Classes/**/*",
-  "public_header_files": "Pod/Classes/**/*.h"
+  "public_header_files": "FitScreenKit/Classes/**/*.h",
+  "dependencies": {
+    "DeviceKit": [
+      "~> 1.3"
+    ]
+  }
 }

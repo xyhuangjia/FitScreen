@@ -8,9 +8,9 @@
 #import "MHDeviceModel.h"
 #include <sys/sysctl.h>
 
-/*4 系列设备*/
-static CGFloat const kiPhone4SScreenWidth = 320;
-static CGFloat const kiPhone4SScreenHeigth = 480;
+///*4 系列设备*/
+//static CGFloat const kiPhone4SScreenWidth = 320;
+//static CGFloat const kiPhone4SScreenHeigth = 480;
 
 /*5 系列设备*/
 static CGFloat const kiPhone5SScreenWidth = 320;
@@ -27,6 +27,12 @@ static CGFloat const kiPhone6PlusScreenHeigth = 736;
 /*X系列设备*/
 static CGFloat const kiPhoneXScreenWidth = 375;
 static CGFloat const kiPhoneXScreenHeigth = 812;
+
+/*X Plus系列设备*/
+static CGFloat const kiPhoneXPlusScreenWidth = 414;
+static CGFloat const kiPhoneXPlusScreenHeigth = 896;
+
+
 
 @interface MHDeviceModel()
 
@@ -50,8 +56,14 @@ static CGFloat const kiPhoneXScreenHeigth = 812;
     NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
     free(machine);
     
-    if ([platform isEqualToString:@"iPhone10,3"]||[platform isEqualToString:@"iPhone10,6"]){
-        //X
+    if ([platform isEqualToString:@"iPhone11,6"]){
+        //XS Plus
+        return MHScreenSize6_5;
+    }else if ([platform isEqualToString:@"iPhone11,8"]){
+        //XR
+        return MHScreenSize6_1;
+    }else if ([platform isEqualToString:@"iPhone10,3"]||[platform isEqualToString:@"iPhone10,6"]||[platform isEqualToString:@"iPhone11,2"]){
+        //X XS
         return MHScreenSize5_8;
     }else if ([platform isEqualToString:@"iPhone5,1"]||[platform isEqualToString:@"iPhone5,2"]||[platform isEqualToString:@"iPhone5,3"]||[platform isEqualToString:@"iPhone5,4"]||[platform isEqualToString:@"iPhone6,1"]||[platform isEqualToString:@"iPhone6,2"]||[platform isEqualToString:@"iPhone8,4"]) {
         //5,5S,5C
@@ -65,7 +77,6 @@ static CGFloat const kiPhoneXScreenHeigth = 812;
         //6 Plus,6S Plus,7 Plus,7S Plus,8 Plus
         return MHScreenSize5_5;
     } else if ([platform isEqualToString:@"iPhone Simulator"] || [platform isEqualToString:@"x86_64"]){
-//        return @"iPhone Simulator";
         /*模拟器返回数据*/
         return [self getMHScreenSizeFromSimulator];
     }
@@ -80,11 +91,8 @@ static CGFloat const kiPhoneXScreenHeigth = 812;
 + (MHScreenSize)getMHScreenSizeFromSimulator{
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
-
-//    NSLog(@"%f == %f",width,height);
-    if (width == kiPhone4SScreenWidth && height == kiPhone4SScreenHeigth) {
-        return MHScreenSize3_5;
-    } else if (width == kiPhone5SScreenWidth && height == kiPhone5SScreenHeigth) {
+    
+    if (width == kiPhone5SScreenWidth && height == kiPhone5SScreenHeigth) {
         return MHScreenSize4_0;
     } else if (width == kiPhone6ScreenWidth && height == kiPhone6ScreenHeigth) {
         return MHScreenSize4_7;
@@ -92,7 +100,9 @@ static CGFloat const kiPhoneXScreenHeigth = 812;
         return MHScreenSize5_5;
     } else if (width == kiPhoneXScreenWidth && height == kiPhoneXScreenHeigth) {
         return MHScreenSize5_8;
-    } else {
+    }else if (width == kiPhoneXPlusScreenWidth && height == kiPhoneXPlusScreenHeigth) {
+        return MHScreenSize6_1;
+    }else {
         return MHScreenSizeNew;
     }
     return 0;

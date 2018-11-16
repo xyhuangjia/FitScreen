@@ -11,6 +11,7 @@
 #endif
 
 #import "FitScreenKit.h"
+#import "MHDeviceModel.h"
 #import "MHFitScreenKit.h"
 
 FOUNDATION_EXPORT double FitScreenKitVersionNumber;

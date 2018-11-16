@@ -9,6 +9,7 @@
 #import "MHAppDelegate.h"
 //#import <FitScreenKit/MHFitScreenKit.h>
 #import <FitScreenKit/FitScreenKit.h>
+#import <DeviceUtil/DeviceUtil.h>
 @implementation MHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -18,7 +19,7 @@
 //    NSLog(@"%f",factor(1080));
     [[MHFitScreenKit shareInstance] setViewCalloutSize:Callout750X1334];
     NSLog(@"%f",factorX(750));
-    NSLog(@"%f",factorY(1334));
+//    NSLog(@"%f",factorY(1334));
 //    NSLog(@"%f",factorX(1080));
 //    NSLog(@"%f",factorY(1920));
 //    NSLog(@"%f",factor(1080));
@@ -27,6 +28,12 @@
 //    CGFloat  a;
 //    a = factor(100);
 //    NSLog(@"%f",a);
+    
+//    DeviceUtil *deviceUtil = [[DeviceUtil alloc] init];
+//    NSLog(@"%@",deviceUtil);
+//    if ([deviceUtil hardware] == IPHONE_5C) {
+//        NSLog(@"Device is iPhone 5c");
+//    }
     return YES;
 }
 

@@ -1,29 +1,23 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - FitScreenKit (0.0.5)
-  - Nimble (7.0.2)
-  - Quick (1.2.0)
+  - DeviceUtil (4.0.3)
+  - FitScreenKit (0.1.2):
+    - DeviceUtil
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
   - FitScreenKit (from `../`)
-  - Nimble
-  - Quick
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DeviceUtil
 
 EXTERNAL SOURCES:
   FitScreenKit:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FitScreenKit: 25bcc06b41fdbddc23d16778a9b74bd94a7f710c
-  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  DeviceUtil: 35f32c989a4428e9b3075028ef4324cf8f84dfad
+  FitScreenKit: 664e2ea7daa11c507a2bd76959e291ce303fe4de
 
-PODFILE CHECKSUM: e87123ac93f5aa45ce097a4342827c74e7917506
+PODFILE CHECKSUM: 776540c25b11ba5fefefb03402bef45747a81062
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.0.beta.1

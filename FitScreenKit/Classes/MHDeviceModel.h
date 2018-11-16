@@ -24,6 +24,8 @@ typedef NS_ENUM(NSInteger,MHScreenSize) {
     MHScreenSize4_7,
     MHScreenSize5_5,
     MHScreenSize5_8,
+    MHScreenSize6_1,
+    MHScreenSize6_5,
     MHScreenSizeNew,
 };
 
