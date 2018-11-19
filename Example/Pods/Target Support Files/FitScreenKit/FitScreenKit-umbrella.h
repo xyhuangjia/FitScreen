@@ -10,9 +10,6 @@
 #endif
 #endif
 
-#import "FitScreenKit.h"
-#import "MHDeviceModel.h"
-#import "MHFitScreenKit.h"
 
 FOUNDATION_EXPORT double FitScreenKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char FitScreenKitVersionString[];
