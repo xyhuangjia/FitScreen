@@ -8,5 +8,9 @@
 #ifndef Header_h
 #define Header_h
 
+//@inline(never) func testInlineNever() {
+//    print("aaa")
+//}
+
 
 #endif /* Header_h */
