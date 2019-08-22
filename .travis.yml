@@ -16,13 +16,7 @@ install:
   fi
 script:
 - |
-  if [ "$TEST_TYPE" = "iOS" ]; then
-    # set -o pipefail
-    # xcodebuild test -project CRToast.xcodeproj -scheme CRToast -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 4s" -destination "platform=iOS Simulator,name=iPhone 6 Plus" GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty -c
-    # pushd Example
-    #   xcodebuild -project CRToastDemo.xcodeproj -scheme CRToastDemo -sdk iphonesimulator | xcpretty -c
-    # popd
-  elif [ "$TEST_TYPE" = CocoaPods ]; then
+  if [ "$TEST_TYPE" = CocoaPods ]; then
     pod lib lint CRToast.podspec --allow-warnings
     pod lib lint --use-libraries CRToast.podspec --allow-warnings
   elif [ "$TEST_TYPE" = Carthage ]; then
