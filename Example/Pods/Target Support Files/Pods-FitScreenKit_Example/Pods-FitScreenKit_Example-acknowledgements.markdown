@@ -25,7 +25,7 @@ THE SOFTWARE.
 
 ## FitScreenKit
 
-Copyright (c) 2018 xyhuangjia@foxmail.com <xyhuangjia@foxmail.com>
+Copyright (c) 2017 黄佳 <xyhuangjia@foxmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

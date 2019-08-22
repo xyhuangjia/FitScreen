@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "Header.h"
 
 FOUNDATION_EXPORT double FitScreenKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char FitScreenKitVersionString[];

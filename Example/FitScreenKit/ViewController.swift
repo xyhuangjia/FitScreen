@@ -9,6 +9,8 @@
 import UIKit
 import FitScreenKit
 
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,10 +18,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let dev = FitScreenKit()
         
-        print(dev.FactorX(value: 120))
-        
-//        print(FitScreenKit())
-        
+        print(dev.FactorX(value: 100))
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,3 +29,14 @@ class ViewController: UIViewController {
 
 }
 
+extension UIViewController{
+    static func factor() {
+        print("111")
+    }
+}
+
+extension UIView{
+    static func factor() {
+        print("111")
+    }
+}
